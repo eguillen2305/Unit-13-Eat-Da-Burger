@@ -13,7 +13,36 @@
             </div>
         </form>
         </div>
+        {{!-- END OF JUMBOTRON ============== --}}
 
+<div class="row">
+    {{!-- HANDLE BARS FOR BURGERS NOT EATEN--}}
+    <div class="col-lg-6">
+        <div class="card text-white bg-warning border-danger mb-3">
+            <h2 class="text-danger text-center">Eat the Burger!</h2>
+            <hr>
+            <ul class="list-group ml-5">
+                {{#each burger}}
+                {{#unless devoured}}
+                {{> burger/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+    </div> 
+    {{!-- HANDLE BARS FOR BURGERS EATEN  --}}
+    <div class="col-lg-6">
+        <div class="card text-white bg-success border-danger mb-3">
+            <h2 class="text-white text-center">Yummers!</h2>
+            <hr>
+            <ul class="list-group">
+                {{#each burger}}
 
+                {{#if devoured}}
+                {{> burger/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
         </div>
-        </div>
+    </div>
+</div>
