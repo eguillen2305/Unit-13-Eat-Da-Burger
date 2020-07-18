@@ -9,3 +9,15 @@ $(function () {
         }
     })
 
+     $.ajax("/api/burger/" + id, {
+      type: "PUT",
+      data: newEatingState
+    }).then(
+      function() {
+        console.log("changed eat to", newEatingState);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });  
+
