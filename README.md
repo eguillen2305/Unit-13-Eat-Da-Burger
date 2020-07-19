@@ -22,10 +22,19 @@ So that I can organize and plan my business
 ## How to use the Application
 
 ### Local Demo Install
-1. first clone the application to your local file
-`git clone`
-2. install the packages with npm `npm install`
-3. run the server with `node server.js`
+Clone the files from the gitrepo.
+
+Run NPM command as the package.json file is already created.
+
+npm install
+
+To create & populate the database on the local machine run the files with the db folder
+
+to access the site locally type in the command terminal under the folder path
+
+node server.js
+
+Access the site by typing localhost path in ypur browser
 
 ## Technology Used
  ![](http://williamavasquez.herokuapp.com/img/js.png)
