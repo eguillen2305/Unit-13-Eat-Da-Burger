@@ -14,11 +14,13 @@ https://eatdaburger2305.herokuapp.com/
 ```sh
 
 As a burger enthusiast, 
-I want to eat Da burger and keep track of the da burgers I want to eat and have eaten.
+I want to eat Da burger and keep track of the da burgers I want to eat and have eaten. 
+Featuring our famous burgers such as: Bohemian Radishy Burger, Two Karat Burger (comes with two carrots), Eggers Cant Be Cheesers (with fried egg & cheese), Poutine on the Ritz Burger (comes with poutine fries). 
 
 ```
 ![screenshot1](/screenshot/Screenshot%201.png)
 
+![screenshot1](views/assets/img/burger.png)
 
 ## How to use the Application
 
