@@ -23,7 +23,7 @@ $(function() {
 		event.preventDefault();
 
 		var newburger = {
-			cupcake_name: $('#newburger').val().trim(),
+			burger_name: $('#newburger').val().trim(),
 			devoured: 0 //Set to false
 		};
 

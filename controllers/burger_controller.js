@@ -17,13 +17,12 @@ router.get("/", function(req, res) {
 router.post("/api/burger", function(req, res) {
     console.log("Data from HTML:" + req.body);
     burger.insertOne("burger_name", req.body.burger_name,  function(result) {
-        // Send back the ID of the new cupcake
         console.log(result.insertId);
         res.redirect("/");
       });
 });
 
-// router put to update
+// router put to update record
 router.put("/api/burger/:id", function(req, res) {
   var condition = "id = " + req.params.id;
   console.log("condition", condition);
