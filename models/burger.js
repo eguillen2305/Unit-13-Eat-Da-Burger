@@ -2,7 +2,7 @@ var orm = require('../config/orm.js');
 
 var burger = {
 	selectAll: function(cb) {
-		// ORM SELECT ALL HERE
+		// ORM SELECT ALL HERE will take the SQL statement and send result at return
 		orm.selectAll('burger', function(res) {
 			cb(res);
 		});
@@ -20,5 +20,5 @@ var burger = {
 	}
 };
 
-// Export the database functions for the controller (burger_controller.js).
+// Export the database functions for the controller burger_controller.js
 module.exports = burger;
