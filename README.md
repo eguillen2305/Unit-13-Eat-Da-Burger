@@ -7,7 +7,7 @@
 
 ## Summary
 
-Back-end Content Management System for managing a database of employees. Uses node,inquirer, and MySQL
+Back end and front application to track and add burgers eaten. Uses node,inquirer, and MySQL
 https://eatdaburger2305.herokuapp.com/
  
 ## User Story
