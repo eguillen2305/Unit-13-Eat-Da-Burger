@@ -2,7 +2,7 @@
 var mysql = require('mysql');
 
 var connection;
-//When deployed on heroku
+//Heroku
 if (process.env.JAWSDB_URL) {
 	connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
