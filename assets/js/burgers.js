@@ -18,7 +18,7 @@ $(function() {
 	});
 
 	$('.create-form').on('submit', function(event) {
-		// Make sure to preventDefault on a submit event.
+		// PreventDefault on a submit event.
 		event.preventDefault();
 
 		var newburger = {
@@ -32,7 +32,7 @@ $(function() {
 			data: newburger
 		}).then(function() {
 			console.log('created new burger');
-			// Reload the page to get the updated list
+			// Reloads the page to get the updated list
 			location.reload();
 		});
 	});
