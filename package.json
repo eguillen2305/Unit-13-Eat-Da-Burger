@@ -12,7 +12,11 @@
 		"type": "git",
 		"url": "git+ https://github.com/eguillen2305/Unit-13-Eat-Da-Burger"
 	},
-	"keywords": [ "burger", "express", "handlebars" ],
+	"keywords": [
+		"burger",
+		"express",
+		"handlebars"
+	],
 	"author": "Eduardo Guillen",
 	"license": "MIT",
 	"bugs": {

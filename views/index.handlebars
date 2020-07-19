@@ -1,7 +1,7 @@
 {{!-- Start of Index.handlebars --}}
 
 <div class="container">
-    <div class="jumbotron" id="pageHeader">
+    <div class="jumbotron">
         <h1 class = "text-center"> Eat da burger!</h1>
         <br>
         <form class="create-form">
@@ -12,16 +12,21 @@
                 <button type="submit" class="btn btn-danger" id="addburger">Add Burger</button>
             </div>
         </form>
+        {{!-- Bobs burgers image --}}
+            <div class="col-4 d-flex justify-content-center">
+                <img src="assets/img/burger.png">
+            </div>
         </div>
 </div>
 
         {{!-- END OF JUMBOTRON ============== --}}
 
+   
 <div class="row">
     {{!-- HANDLE BARS FOR BURGERS NOT EATEN--}}
     <div class="col-lg-6">
         <div class="card text-white bg-warning border-danger mb-3">
-            <h2 class="text-danger text-center">Eat the Burger!</h2>
+            <h2 class="text-danger text-center">Eat this burger?</h2>
             <hr>
             <ul class="list-group ml-5">
                 {{#each burger}}
@@ -35,7 +40,7 @@
     {{!-- HANDLE BARS FOR BURGERS EATEN  --}}
     <div class="col-lg-6">
         <div class="card text-white bg-success border-danger mb-3">
-            <h2 class="text-white text-center">Yummers!</h2>
+            <h2 class="text-white text-center">Burgers Eaten</h2>
             <hr>
             <ul class="list-group">
                 {{#each burger}} 
