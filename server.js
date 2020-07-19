@@ -11,7 +11,6 @@ var routes = require('./controllers/burger_controller.js');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Use the express.static middleware to serve static content for the app from the "public" directory in the application directory.
 app.use(express.static('public'));
 
 //Setting handlebar engines
