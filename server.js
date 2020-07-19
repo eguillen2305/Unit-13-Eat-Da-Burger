@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 var exphbs = require('express-handlebars');
-
+//process.env.port to allow Heroku deployment
 var PORT = process.env.PORT || 3000;
 
 var routes = require('./controllers/burger_controller.js');
