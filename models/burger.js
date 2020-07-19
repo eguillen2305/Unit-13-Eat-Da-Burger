@@ -1,9 +1,8 @@
-//Dependencies
 var orm = require('../config/orm.js');
 
 var burger = {
-    selectAll: function (cb) {
-        //ORM Method to execute SQL statement and send result
+	selectAll: function(cb) {
+		// ORM SELECT ALL HERE
 		orm.selectAll('burger', function(res) {
 			cb(res);
 		});
@@ -21,5 +20,5 @@ var burger = {
 	}
 };
 
-//Exports database function to burger.js
+// Export the database functions for the controller (burgercontroller.js).
 module.exports = burger;
