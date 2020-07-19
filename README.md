@@ -8,7 +8,7 @@
 ## Summary
 
 Back-end Content Management System for managing a database of employees. Uses node,inquirer, and MySQL
- https://note-taker-app2035.herokuapp.com/
+https://eatdaburger2305.herokuapp.com/
  
 ## User Story
 ```sh
