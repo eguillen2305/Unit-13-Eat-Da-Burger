@@ -17,6 +17,8 @@ As a burger enthusiast,
 I want to eat Da burger and keep track of the da burgers I want to eat and have eaten.
 
 ```
+![screenshot1](/screenshot/Screenshot%201.png)
+
 
 ## How to use the Application
 
