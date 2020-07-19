@@ -25,7 +25,7 @@
     "homepage": "https://github.com/eguillen2305/Unit-13-Eat-Da-Burger/blob/master/README.md",
     "dependencies": {
         "express": "^4.17.1",
-        "express-handlebars": "^5.0.0",
+        "express-handlebars": "^5.1.0",
         "mysql": "^2.18.1",
         "nodemon": "^2.0.4"
     }
