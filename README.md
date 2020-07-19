@@ -13,9 +13,8 @@ https://eatdaburger2305.herokuapp.com/
 ## User Story
 ```sh
 
-As a business owner
-I want to be able to view and manage the departments, roles, and employees in my company
-So that I can organize and plan my business
+As a burger enthusiast, 
+I want to eat Da burger and keep track of the da burgers I want to eat and have eaten.
 
 ```
 
@@ -24,17 +23,11 @@ So that I can organize and plan my business
 ### Local Demo Install
 Clone the files from the gitrepo.
 
-Run NPM command as the package.json file is already created.
+Run npm install in the terminal.
 
-npm install
+run node server.js
 
-To create & populate the database on the local machine run the files with the db folder
-
-to access the site locally type in the command terminal under the folder path
-
-node server.js
-
-Access the site by typing localhost path in ypur browser
+Access the site by typing localhost path in your chrome browser
 
 ## Technology Used
  ![](http://williamavasquez.herokuapp.com/img/js.png)
