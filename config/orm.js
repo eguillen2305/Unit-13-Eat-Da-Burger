@@ -1,22 +1,37 @@
 var connection = require('../config/connection.js');
 
-var connection;
-if (process.env.JAWSDB_URL) {
-	connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-	connection = mysql.createConnection({
-		host: 'localhost',
-		port: 3306,
-		user: 'root',
-		password: 'password',
-		database: 'burger_db'
-	});
-}
-// Establishes the connection
-connection.connect(function(err) {
-	if (err) {
-		console.error('error connecting: ' + err.stack);
-		return;
-	}
-	console.log('connected as id ' + connection.threadId);
-});
+var orm = {
+    selectAll: function (cb) {
+        var queryString = "SELECT * FROM burgers";
+        connection.query(queryString, (err, result) => {
+            if (err) throw err;
+            cb(result);
+        });
+    },
+
+    insertOne: function (burger, cb) {
+        var queryString = "INSERT INTO burgers (burger_name) VALUES (?)";
+        connection.query(queryString, [burger], (err, result) => {
+            if (err) throw err;
+            cb(result);
+        });
+    },
+
+    updateOne: function (id, cb) {
+        var queryString = "UPDATE burgers SET devoured = true WHERE id = ?";
+        connection.query(queryString, [id], (err, result) => {
+            if (err) throw err;     
+            cb(result);
+        });
+    },
+
+    deleteOne: function (id, cb) {
+        var queryString = "DELETE FROM burgers WHERE id = ?";
+        connection.query(queryString, [id], (err, result) => {
+            if (err) throw err;
+            cb(result)
+        })
+    }
+};
+
+module.exports = orm;
