@@ -1,55 +1,58 @@
-{{!-- Start of Index.handlebars --}}
+<h1>Welcome</h1>
+<br>
 
-<div class="container">
-    <div class="jumbotron">
-        <h1 class = "text-center"> Eat da burger!</h1>
-        <br>
-        <form class="create-form">
-            <div class="form-group">
-                <label for="newburger"></label>What kind of burger would you like?</label>
-                <input type="text" id="newburger" name="burger_name">
-                {{!-- BUTTON FOR USER INPUT INTO DATABASE --}}
-                <button type="submit" class="btn btn-danger" id="addburger">Add Burger</button>
-            </div>
-        </form>
-        {{!-- Bobs burgers image --}}
-            <div class="col-4 d-flex justify-content-center">
-                <img src="assets/img/burger.png">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 d-flex justify-content-center">
+            <div id="left">
+                <h2>Eat Da Burger:</h2>
+
+                <ul>
+                    {{#each burgers}} {{#unless this.devoured}}
+                    <li>
+                        {{this.burger_name}}
+
+                        <form action="/{{this.id}}" method="POST">
+                            <input type="hidden" name="devoured">
+                            <button class="btn btn-danger" type="submit">Eat Da Burger</button>
+                        </form>
+                    </li>
+                    {{/unless}} {{/each}}
+                </ul>
             </div>
         </div>
-</div>
-
-        {{!-- END OF JUMBOTRON ============== --}}
-
-   
-<div class="row">
-    {{!-- HANDLE BARS FOR BURGERS NOT EATEN--}}
-    <div class="col-lg-6">
-        <div class="card text-white bg-warning border-danger mb-3">
-            <h2 class="text-danger text-center">Eat this burger?</h2>
-            <hr>
-            <ul class="list-group ml-5">
-                {{#each burger}}
-                {{#unless devoured}}
-                {{> burger/burger-block devoured=true}}
-                {{/unless}}
-                {{/each}}
-            </ul>
+        <div class="col-4 d-flex justify-content-center">
+            <img src="/public/assets/img/juicyburger.png">
         </div>
-    </div> 
-    {{!-- HANDLE BARS FOR BURGERS EATEN  --}}
-    <div class="col-lg-6">
-        <div class="card text-white bg-success border-danger mb-3">
-            <h2 class="text-white text-center">Burgers Eaten</h2>
-            <hr>
-            <ul class="list-group">
-                {{#each burger}} 
-                {{#if devoured}}
-                {{> burger/burger-block devoured=false}}
-                {{/if}}
-                {{/each}}
-            </ul>
+
+
+        <div class="col-4 d-flex justify-content-center">
+            <div id="right">
+                <h2>Burgers That Have Been Devoured: </h2>
+
+                <ul>
+                    {{#each burgers}} {{#if this.devoured}}
+                    <li>
+                        {{this.burger_name}}
+
+                        <form action="/remove/{{this.id}}" method="POST">
+                            <input type="hidden" name="devoured">
+                            <button class="btn btn-danger" type="submit">Remove Me!</button>
+                        </form>
+                    </li>
+                    {{/if}} {{/each}}
+                </ul>
+            </div>
         </div>
     </div>
 </div>
+<div id="center">
+    <h2>Add a Burger</h2>
+
+    <form class="create-update-form" method="POST">
+        <div class="form-group">
+            <textarea name="burger_name" rows="2" cols="50"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Add Burger</button>
+    </form>
 </div>
