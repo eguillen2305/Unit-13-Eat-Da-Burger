@@ -1,43 +1,42 @@
-//Loads Express
-var express = require("express");
+var express = require('express');
+
 var router = express.Router();
+
 var burger = require("../models/burger.js");
 
-
-router.get("/", function(req, res) {
-    burger.selectAll(function(data) {
-      var hbsObject = {
-        burger: data
-      };
-      res.render("index", hbsObject);
+router.get("/", (req, res) => {
+    burger.selectAll(function (data) {
+        var burgerObject = {
+            burgers: data
+        };
+        console.log(burgerObject);
+        res.render("index", burgerObject);
     });
 });
 
-//burger.insertOne to post burger
-router.post("/api/burger", function(req, res) {
-    console.log("Data from HTML:" + req.body);
-    burger.insertOne("burger_name", req.body.burger_name,  function(result) {
-        console.log(result.insertId);
-        res.redirect("/");
-      });
-});
+router.post("/", (req, res) => {
 
-// router put to update record
-router.put("/api/burger/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
-  console.log("condition", condition);
-
-  burger.updateOne({
-    devoured: req.body.devoured
-  }, condition, function(result) {
-          if (result.changedRows == 0) {
-        
-      return res.status(404).end();
+    if (req.body.burger_name === ''){
+      console.log('not valid')
     } else {
-      res.status(200).end();
+      burger.insertOne(req.body.burger_name, function () {
+        res.redirect("/");
+    });
     }
-  });
 });
 
-//exports into server.js
+router.post("/:id", (req, res) => {
+    var id = req.params.id;
+    burger.updateOne(id, function () {
+        res.redirect("/");
+    });
+});
+
+router.post("/remove/:id", (req, res) => {
+    var id = req.params.id;
+    burger.deleteOne(id, function () {
+        res.redirect("/");
+    })
+})
+
 module.exports = router;
