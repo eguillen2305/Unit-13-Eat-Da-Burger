@@ -4,6 +4,7 @@ var path = require("path");
 
 var PORT = process.env.PORT || 3000;
 
+//Creates Express APP
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -22,9 +23,10 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 var routes = require("./controllers/burgers_controller.js");
 
+//Setting Routes
 app.use(routes);
 
-
+//Star of server so it can listen to client requests. 
 app.listen(PORT, function() {
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT);
