@@ -1,4 +1,4 @@
-<h1>Welcome</h1>
+<h1>Bob's Burgers</h1>
 <br>
 
 <div class="container-fluid">
@@ -22,11 +22,11 @@
             </div>
         </div>
         <div class="col-4 d-flex justify-content-center">
-            <img src="/public/assets/img/juicyburger.png">
+            <img src="/public/assets/img/juicyburger.jpg">
         </div>
 
 
-        <div class="col-4 d-flex justify-content-center">
+        <div class="col-3 d-flex justify-content-center">
             <div id="right">
                 <h2>Burgers That Have Been Devoured: </h2>
 
@@ -37,7 +37,7 @@
 
                         <form action="/remove/{{this.id}}" method="POST">
                             <input type="hidden" name="devoured">
-                            <button class="btn btn-danger" type="submit">Remove Me!</button>
+                            <button class="btn btn-danger" type="submit">Remove Burger!</button>
                         </form>
                     </li>
                     {{/if}} {{/each}}
@@ -47,12 +47,12 @@
     </div>
 </div>
 <div id="center">
-    <h2>Add a Burger</h2>
+    <h2>Add a Burger!</h2>
 
-    <form class="create-update-form" method="POST">
+    <form class="create-update-form" method="POST"> 
         <div class="form-group">
-            <textarea name="burger_name" rows="2" cols="50"></textarea>
+            <textarea name="burger_name" rows="2" cols="50" placeholder="'Eggers Cant Be Cheesers Burger (with fried egg & cheese)'"></textarea>
         </div>
-        <button class="btn btn-primary" type="submit">Add Burger</button>
+        <button class="btn btn-primary" type="submit">Add Burger!</button>
     </form>
 </div>

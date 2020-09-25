@@ -1,11 +1,11 @@
 body {
-  background: yellow;
+  background: lightgreen;
 }
 
 h1 {
   font-family: 'Modak', cursive;
   text-align: center;
-  font-size: 200px;
+  font-size: 100px;
 }
 
 h2 {
