@@ -22,7 +22,6 @@ Eggers Cant Be Cheesers (with fried egg & cheese),
 Poutine on the Ritz Burger (comes with poutine fries). 
 
 ```
-![screenshot1](/screenshot/Screenshot%201.png)
 
 ![screenshot1](views/assets/img/burger.png)
 
