@@ -8,7 +8,8 @@
 ## Summary
 
 Back end and front application to track and add burgers eaten. Uses node,inquirer, and MySQL
-https://eatdaburger2305.herokuapp.com/
+Heroku Deployment:
+https://rocky-brook-14727.herokuapp.com/
  
 ## User Story
 ```sh
