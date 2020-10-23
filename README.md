@@ -24,7 +24,6 @@ Poutine on the Ritz Burger (comes with poutine fries).
 
 ```
 
-![screenshot1](views/assets/img/burger.png)
 
 ## How to use the Application
 
