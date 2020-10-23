@@ -37,9 +37,7 @@ run node server.js
 Access the site by typing localhost path in your chrome browser
 
 ## Technology Used
- ![](http://williamavasquez.herokuapp.com/img/js.png)
- 
- ![](http://williamavasquez.herokuapp.com/img/node.png)
+Javascript
  
 
 
